@@ -1,0 +1,27 @@
+<mat-sidenav-container class="overflow">
+
+
+  <mat-sidenav-content>
+    <mat-sidenav class="" mode="over" [opened]="opened">
+
+      <mat-selection-list [multiple]="false">
+
+          <mat-list-option  class="item"
+                            *ngFor="let item of items"
+                            [value]="item"
+                            >
+            <mat-icon>{{item.icon}}</mat-icon>
+            <span> {{item.name}}</span>
+          </mat-list-option>
+
+      </mat-selection-list>
+
+    </mat-sidenav>
+    <button class='button' mat-stroked-button (click)="opened=!opened">
+      <mat-icon>{{icon}}</mat-icon>
+    </button>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+

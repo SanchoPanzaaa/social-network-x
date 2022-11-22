@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/templates/basic-grid.scss";
+@import "./app/templates/animations.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$pi-margin: 5px;
+$pi-container-width: 32%;
+
+html, body, .basic-grid { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.common-margin {
+  margin: $pi-margin $pi-margin $pi-margin $pi-margin;
+  padding: $pi-margin $pi-margin $pi-margin $pi-margin;
+}
+
+.pi-container {
+  width: $pi-container-width;
+}

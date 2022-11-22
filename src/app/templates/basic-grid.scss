@@ -1,0 +1,50 @@
+// layout 3x3 responsive, highly reusable
+$animation-duration: 3000ms;
+$animation-color: rgb(36, 243, 147);
+
+$dashboard-background-color: rgb(167, 249, 2);
+
+.basic-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  grid-template-rows: 0.4fr 2.2fr 0.4fr;
+  gap: 3px 3px;
+  border: 1px solid;
+  grid-template-areas:
+    "left-top center-top right-top"
+    "left-center dashboard-area right-center"
+    "left-bot center-bot right-bot";
+
+  --stagger-delay: 100ms;
+}
+// Corners
+.corner {
+ background-color: $animation-color;
+ animation: cardEntrance $animation-duration ease-out;
+ animation-fill-mode: backwards;
+}
+
+
+
+
+
+.center-top {
+
+  grid-area: center-top;
+}
+.left-center {
+  grid-area: left-center;
+}
+.right-center {
+  grid-area: right-center;
+}
+
+.center-bot {
+   grid-area: center-bot;
+}
+.dashboard-area {
+  background-color: $dashboard-background-color;
+  grid-area: dashboard-area;
+
+}
